@@ -53,5 +53,23 @@ app.*.map.json
 .aws/
 .vscode/settings.json
 
+# Credentials and private keys must stay out of the public repository
+.env
+.env.*
+.ssh/
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+credentials.json
+secrets.json
+service-account*.json
+
 # Original assignment brief; the public repository contains the application
 *.pdf
