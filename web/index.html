@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Your everyday fitness companion. Track workouts, build healthy habits, and see your progress with FitX.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#141520">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="FitX">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>FitX · Your everyday fitness companion</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    html, body { color-scheme: dark; margin: 0; background: #141520; }
+    #loading { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; background: #141520; font-family: system-ui, sans-serif; color: #f0eff9; }
+    #loading img { width: 64px; height: 64px; border-radius: 20px; }
+    #loading span { font-size: 26px; font-weight: 800; letter-spacing: -1px; }
+    #loading small { color: #a5a6bd; font-size: 12px; }
+    .spinner { width: 20px; height: 20px; border: 2px solid #303246; border-top-color: #6554e8; border-radius: 50%; animation: spin .8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { .spinner { animation: none; } }
+  </style>
+</head>
+<body>
+  <div id="loading" role="status" aria-label="Loading FitX">
+    <img src="icons/fitx.svg" alt="">
+    <span>FitX</span>
+    <small>A little better, every day.</small>
+    <div class="spinner"></div>
+  </div>
+  <noscript>FitX needs JavaScript enabled to track your workouts and save your progress.</noscript>
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      document.getElementById('loading')?.remove();
+    });
+  </script>
+  <!--
+    You can customize the "flutter_bootstrap.js" script.
+    This is useful to provide a custom configuration to the Flutter loader
+    or to give the user feedback during the initialization process.
+
+    For more details:
+    * https://docs.flutter.dev/platform-integration/web/initialization
+  -->
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
